@@ -35,7 +35,7 @@ Este site foi projetado para:
 ## ➕ Funcionalidades Extra
 
 - [ ] Inscrição em eventos através do website
-- [ ] Publicações e materiais
+- [ ] Publicações
 - [ ] Notícias
 - [ ] Disponibilidade de idiomas Português e Inglês
 - [ ] _Decision Tree_ de escolha de certificação
