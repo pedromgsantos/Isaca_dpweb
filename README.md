@@ -2,7 +2,7 @@
 
 Bem-vindo ao repositório do **ISACA Student Group do ISCAC**! Este projeto foi desenvolvido no âmbito da cadeira de **Desenvolvimento para a Web**, com o objetivo de criar um site que represente as atividades, valores e objetivos do grupo estudantil.
 
-![a7e55841-dc46-4077-a8e3-011f5edffa02](https://github.com/user-attachments/assets/4a01954a-003a-47a0-85df-44dc756e63a2)
+![Design sem nome (6)](https://github.com/user-attachments/assets/f6a20f74-b7b1-4b47-8bb6-b654b13a5834)
 
 ---
 
