@@ -23,7 +23,7 @@ Este site foi projetado para:
 ## 🚀 Funcionalidades Implementáveis
 
 - [x] Home Page de exposição e de entrada para as outras páginas
-- [x] Informação sobre eventos futuros e passados
+- [x] Informação sobre eventos
 - [x] _Links_ e recomendações de materiais de estudo e certificações
 - [x] Formulário de contacto e _links_ para redes sociais
 - [ ] FAQ
