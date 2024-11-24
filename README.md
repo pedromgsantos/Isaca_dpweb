@@ -22,23 +22,39 @@ Este site foi projetado para:
 
 ## 🚀 Funcionalidades Implementáveis
 
-- [x] Inserção e "unlisting" de artigos
-- [x] Visualização de produtos
-- [ ] Agrupamento por categorias
-- [ ] Página de Administração
-- [ ] Login e registo de utilizadores
-- [ ] Handling de erros com páginas para isso
+- [x] Home Page de exposição e ligação para as outras páginas
+- [x] Informação sobre eventos futuros e passados
+- [x] _Links_ e recomendações de materiais de estudo e certificações
+- [x] Formulário de contacto e _links_ para redes sociais
+- [ ] FAQ
+- [ ] Login dos utilizadores
+- [ ] Tratamento de erros
 
 ---
 
 ## ➕ Funcionalidades Extra
 
-- [x] Inserção e "unlisting" de artigos
-- [x] Visualização de produtos
-- [ ] Agrupamento por categorias
-- [ ] Página de Administração
-- [ ] Login e registo de utilizadores
-- [ ] Handling de erros com páginas para isso
+- [ ] Inscrição em eventos através do website
+- [ ] Publicações e materiais
+- [ ] Notícias
+- [ ] Disponibilidade de idiomas Português e Inglês
+- [ ] _Decision Tree_ de escolha de certificação
+
+---
+
+## 📄 Lista de páginas
+
+- [x] Index
+- [x] Sobre Nós
+- [x] Certificados
+- [x] Cookies
+- [ ] Eventos
+- [ ] Publicações
+- [ ] Contactos
+- [ ] Login
+- [ ] Redefinir Senha
+- [ ] Adicionar publicação
+- [ ] Página de erro
 
 ---
 
