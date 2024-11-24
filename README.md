@@ -20,7 +20,18 @@ Este site foi projetado para:
 
 ---
 
-## 🚀 Funcionalidades
+## 🚀 Funcionalidades Implementáveis
+
+- [x] Inserção e "unlisting" de artigos
+- [x] Visualização de produtos
+- [ ] Agrupamento por categorias
+- [ ] Página de Administração
+- [ ] Login e registo de utilizadores
+- [ ] Handling de erros com páginas para isso
+
+---
+
+## 🚀 Funcionalidades Extra
 
 - [x] Inserção e "unlisting" de artigos
 - [x] Visualização de produtos
