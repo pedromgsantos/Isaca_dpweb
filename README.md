@@ -31,7 +31,7 @@ Este site foi projetado para:
 
 ---
 
-## 🚀 Funcionalidades Extra
+## ➕ Funcionalidades Extra
 
 - [x] Inserção e "unlisting" de artigos
 - [x] Visualização de produtos
