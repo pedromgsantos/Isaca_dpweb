@@ -1,4 +1,4 @@
-# ISACA Student Group - ISCAC 🌐
+# ISACA Student Group...... - ISCAC 🌐
 
 Bem-vindo ao repositório do **ISACA Student Group do ISCAC**! Este projeto foi desenvolvido no âmbito da cadeira de **Desenvolvimento para a Web**, com o objetivo de criar um site que represente as atividades, valores e objetivos do grupo estudantil.
 
