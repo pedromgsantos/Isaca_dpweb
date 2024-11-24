@@ -27,7 +27,6 @@ Este site foi projetado para:
 - [x] _Links_ e recomendações de materiais de estudo e certificações
 - [x] Formulário de contacto e _links_ para redes sociais
 - [ ] FAQ
-- [ ] Login dos utilizadores
 - [ ] Tratamento de erros
 
 ---
@@ -35,7 +34,7 @@ Este site foi projetado para:
 ## ➕ Funcionalidades Extra
 
 - [ ] Inscrição em eventos através do website
-- [ ] Publicações
+- [ ] Login e publicações
 - [ ] Notícias
 - [ ] Disponibilidade de idiomas Português e Inglês
 - [ ] _Decision Tree_ de escolha de certificação
