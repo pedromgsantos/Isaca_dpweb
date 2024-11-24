@@ -22,10 +22,12 @@ Este site foi projetado para:
 
 ## 🚀 Funcionalidades
 
-- **Página Inicial**: Visão geral sobre o ISACA Student Group.
-- **Eventos**: Lista de eventos passados e futuros.
-- **Sobre Nós**: Informações sobre a equipa e missão do grupo.
-- **Contacto**: Formulário para entrar em contacto diretamente com a organização.
+- [x] Inserção e "unlisting" de artigos
+- [x] Visualização de produtos
+- [ ] Agrupamento por categorias
+- [ ] Página de Administração
+- [ ] Login e registo de utilizadores
+- [ ] Handling de erros com páginas para isso
 
 ---
 
