@@ -24,7 +24,7 @@ Este site foi projetado para:
 
 - [x] Home Page de exposição e de entrada para as outras páginas
 - [x] Informação sobre eventos
-- [x] _Links_ e recomendações de materiais de estudo e certificações
+- [ ] _Links_ e recomendações de materiais de estudo e certificações
 - [x] Formulário de contacto e _links_ para redes sociais
 - [ ] FAQ
 - [ ] Tratamento de erros
