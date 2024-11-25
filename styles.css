@@ -455,8 +455,6 @@
     color: #000;
 }
 
-
-
 .footer .social-links a {
     color: #0D2C6C;
     margin-right: 10px;
@@ -497,5 +495,13 @@
   }
 
 .footer .nav-link:hover {
+    color: #35B390;
+}
+
+.footer .link1{
+    color: #000;
+}
+
+.footer .link1:hover{
     color: #35B390;
 }
