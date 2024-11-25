@@ -20,12 +20,40 @@ Este site foi projetado para:
 
 ---
 
-## 🚀 Funcionalidades
+## 🚀 Funcionalidades Implementáveis
 
-- **Página Inicial**: Visão geral sobre o ISACA Student Group.
-- **Eventos**: Lista de eventos passados e futuros.
-- **Sobre Nós**: Informações sobre a equipa e missão do grupo.
-- **Contacto**: Formulário para entrar em contacto diretamente com a organização.
+- [x] Home Page de exposição e de entrada para as outras páginas
+- [x] Informação sobre eventos
+- [ ] _Links_ e recomendações de materiais de estudo e certificações
+- [x] Formulário de contacto e _links_ para redes sociais
+- [ ] FAQ
+- [ ] Tratamento de erros
+
+---
+
+## ➕ Funcionalidades Extra
+
+- [ ] Inscrição em eventos através do website
+- [ ] Login e publicações
+- [ ] Notícias
+- [ ] Disponibilidade de idiomas Português e Inglês
+- [ ] _Decision Tree_ de escolha de certificação
+
+---
+
+## 📄 Lista de páginas
+
+- [x] Index
+- [x] Sobre Nós
+- [x] Certificados
+- [x] Cookies
+- [ ] Eventos
+- [ ] Publicações
+- [ ] Contactos
+- [ ] Login
+- [ ] Redefinir Senha
+- [ ] Adicionar publicação
+- [ ] Página de erro
 
 ---
 
