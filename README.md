@@ -60,7 +60,7 @@ Este site foi projetado para:
 ## 🛠️ Tecnologias Utilizadas
 
 Este projeto foi desenvolvido utilizando as seguintes tecnologias:
-- **HTML5**: Estrutura do site.
+- **HTML5**: Estrutura do site..
 - **CSS**: Estilização e layout.
 - **JavaScript**: Funcionalidades interativas.
 - **Bootstrap**: Framework para design responsivo.
