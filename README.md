@@ -33,7 +33,7 @@ Este site foi projetado para:
 
 ## ➕ Funcionalidades Extra
 
-- [ ] Inscrição em eventos através do website
+- [x] Inscrição em eventos através do website
 - [ ] Login e publicações
 - [ ] Notícias
 - [ ] Disponibilidade de idiomas Português e Inglês
