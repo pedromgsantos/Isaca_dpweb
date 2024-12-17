@@ -34,8 +34,8 @@ Este site foi projetado para:
 ## ➕ Funcionalidades Extra
 
 - [x] Inscrição em eventos através do website
-- [ ] Login e publicações
-- [ ] Notícias
+- [ ] Inserção de eventos de forma dinâmica
+- [ ] Web Scraping de Notícias
 - [ ] Disponibilidade de idiomas Português e Inglês
 - [ ] _Decision Tree_ de escolha de certificação
 
