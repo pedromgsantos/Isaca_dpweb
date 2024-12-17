@@ -48,11 +48,10 @@ Este site foi projetado para:
 - [x] Certificados
 - [x] Cookies
 - [ ] Eventos
-- [ ] Publicações
-- [ ] Contactos
-- [ ] Login
-- [ ] Redefinir Senha
-- [ ] Adicionar publicação
+- [ ] Detalhes de Eventos
+- [ ] Contatos
+- [ ] Notícias
+- [ ] Termos de uso
 - [ ] Página de erro
 
 ---
