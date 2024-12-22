@@ -1,4 +1,27 @@
-<?php require('includes/connection.php') ?>
+<?php
+require('includes/connection.php');
+
+// Verifica se o parâmetro 'id' foi passado
+if (!isset($_GET['id']) || empty($_GET['id'])) {
+    header("Location: Isaca_dpweb/404.php");
+    exit;
+}
+
+$id = (int)$_GET['id']; // Converte o ID para um inteiro
+
+// Verifica se o evento existe no banco de dados
+$sql = 'SELECT * FROM eventos WHERE id = ? AND visivel = 1';
+$stmt = $dbh->prepare($sql);
+$stmt->execute([$id]);
+
+$evento = $stmt->fetchObject();
+
+if (!$evento) {
+    // Se o evento não existir, redireciona para a página de erro
+    header("Location: /Isaca_dpweb/404.php");
+    exit;
+}
+?>
 <?php 
 if (empty($_GET['id'])) {
     header('Location:index.html');
@@ -37,7 +60,7 @@ if (empty($_GET['id'])) {
     <title>ISACA Student Group do ISCAC</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-icons.min.css">
-    <link rel ="icon" href = "Imagens/ISACA_logo.png">
+    <link rel ="icon" href = "imagens/ISACA_logo.png">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -52,7 +75,7 @@ if (empty($_GET['id'])) {
             <i class="bi bi-arrow-left me-2" style="font-size: 1.5rem;"></i> Voltar
         </a>
         <!-- Logo como imagem -->
-        <img src="Imagens/LOGO1.2.png" 
+        <img src="imagens/LOGO1.2.png" 
              alt="ISACA Logo" 
              style="max-width: 100%; height: auto; max-height: 100px; object-fit: contain;" 
              class="img-fluid ms-lg-5 ms-2">
@@ -67,7 +90,7 @@ $stmt->bindValue(':id', $id);
 $stmt->execute();
 if ($stmt && $stmt->rowCount() == 1) {
     $evento = $stmt->fetchObject();
-    $imagem = filter_var($evento->imagem, FILTER_VALIDATE_URL) !== false ? $evento->imagem : 'Imagens/eventos/'.$evento->imagem;
+    $imagem = filter_var($evento->imagem, FILTER_VALIDATE_URL) !== false ? $evento->imagem : 'imagens/eventos/'.$evento->imagem;
     $data = new DateTime($evento->data);
     $formatada = new IntlDateFormatter(
         'pt_pt', // Idioma
@@ -163,8 +186,7 @@ if(!$stmt || $stmt->rowCount() == 0){
             <div class="form-check mb-3">
                  <input type="checkbox" name="consentimento" id="consentimento" class="form-check-input" required>
                  <label for="consentimento" class="form-check-label">
-                Concordo com os <a href="termos_de_uso.html">termos de uso</a> e autorizo o uso das minhas informações.
-                Ou clique <a href="https://www.youtube.com/watch?v=qBshpf-ZpD4">aqui</a> para saber ainda mais.
+                Concordo com os <a target="_blank" href="termos_de_uso.html">termos de uso</a> e autorizo o uso das minhas informações.
             </div>
             <!-- Botão enviar centralizado -->
             <div style="text-align: center;">
