@@ -37,7 +37,7 @@
     <!-- Header -->
     <header class="bg-light">
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f5f5f5; margin-top: -20px;">
-            <a class="navbar-brand" style="margin-top: 20px" href="index.html">
+            <a class="navbar-brand" style="margin-top: 20px" href="index.php">
                 <img src="imagens/LOGO1.2.png" alt="ISACA Student Group Logo" class="img-fluid ms-lg-5 ms-2" style="max-width: 200px; width: auto;">
             </a>
             
@@ -49,12 +49,12 @@
             <!-- NavBar-->
             <div id ="menu-principal" style="font-family: Outfit; font-size: 20px; font-weight: bold; margin-right: 50px;" class="collapse navbar-collapse">
                 <div class="navbar-nav nav-underline mb-4 ms-auto" >
-                    <a href="sobre_nos.html" class="nav-link me-3">Sobre&nbsp;Nós</a>
-                    <a href="noticias.html" class="nav-link me-3">Notícias</a>
+                    <a href="sobre_nos.php" class="nav-link me-3">Sobre&nbsp;Nós</a>
+                    <a href="noticias.php" class="nav-link me-3">Notícias</a>
                     <a href="eventos.php" class="nav-link active me-3">Eventos</a>
-                    <a href="certificados.html" class="nav-link me-3">Certificados</a>
+                    <a href="certificados.php" class="nav-link me-3">Certificados</a>
                     <a href="contactos.php" class="nav-link me-3">Contactos</a>
-                    <a href="index.html" class="nav-link me-3">
+                    <a href="index.php" class="nav-link me-3">
                         <img src="https://flagcdn.com/w40/gb.png" alt="English" style="width: 30px; height: auto;">
                     </a>
                 </div>
