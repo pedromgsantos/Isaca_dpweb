@@ -309,16 +309,16 @@ require('../includes/connection.php');
             if (response.ok) {
               // Substitui o conteúdo do formulário pela mensagem de agradecimento
               document.getElementById("contactForm").innerHTML = `
-                <h4 class="mt-4 text-center" style="color: #2a9d8f;">Mensagem enviada com sucesso!</h4>
-                <p class="text-center">Obrigado por entrar em contacto. Responderemos em breve!</p>
+                <h4 class="mt-4 text-center" style="color: #2a9d8f;">Message sent!</h4>
+                <p class="text-center">Thanks for reaching out. We will be in touch soon.</p>
               `;
             } else {
-              alert("Erro ao enviar mensagem. Tente novamente.");
+              alert("Error.");
             }
           })
           .catch((error) => {
-            console.error("Erro ao enviar o formulário:", error);
-            alert("Erro ao enviar mensagem. Tente novamente.");
+            console.error("Error.", error);
+            alert("Error.");
           });
       }
 
