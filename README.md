@@ -26,16 +26,16 @@ Este site foi projetado para:
 - [x] Informação sobre eventos
 - [ ] _Links_ e recomendações de materiais de estudo e certificações
 - [x] Formulário de contacto e _links_ para redes sociais
-- [ ] FAQ
-- [ ] Tratamento de erros
+- [x] FAQ
+- [x] Tratamento de erros
 
 ---
 
 ## ➕ Funcionalidades Extra
 
 - [x] Inscrição em eventos através do website
-- [ ] Inserção de eventos de forma dinâmica
-- [ ] Web Scraping de Notícias
+- [x] Inserção de eventos de forma dinâmica
+- [x] Web Scraping de Notícias
 - [ ] Disponibilidade de idiomas Português e Inglês
 - [ ] _Decision Tree_ de escolha de certificação
 
