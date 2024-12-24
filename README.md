@@ -95,7 +95,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 ├── detalhesevento.php # Página Detalhes de Eventos
 ├── enviar_email.php   # Ficheiro de apoio á pagina de contactos
 ├── eventos.php        # PáginaEventos
-├── index.html         # Página inicial
+├── index.php         # Página inicial
 ├── noticias.php       # Página Noticias
 ├── scraper.php        # Ficheiro de apoio á pagina de noticias
 ├── sobre_nos.php      # Página Sobre Nós
