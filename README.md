@@ -24,7 +24,7 @@ Este site foi projetado para:
 
 - [x] Home Page de exposição e de entrada para as outras páginas
 - [x] Informação sobre eventos
-- [ ] _Links_ e recomendações de materiais de estudo e certificações
+- [x] _Links_ e recomendações de materiais de estudo e certificações
 - [x] Formulário de contacto e _links_ para redes sociais
 - [x] FAQ
 - [x] Tratamento de erros
@@ -36,8 +36,8 @@ Este site foi projetado para:
 - [x] Inscrição em eventos através do website
 - [x] Inserção de eventos de forma dinâmica
 - [x] Web Scraping de Notícias
-- [ ] Disponibilidade de idiomas Português e Inglês
-- [ ] _Decision Tree_ de escolha de certificação
+- [x] Disponibilidade de idiomas Português e Inglês
+- [x] _Decision Tree_ de escolha de certificação
 
 ---
 
