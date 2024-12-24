@@ -53,6 +53,16 @@ Este site foi projetado para:
 - [x] Notícias
 - [x] Termos de uso
 - [x] Página de erro
+- [x] en/Index
+- [x] en/Sobre Nós
+- [x] en/Certificados
+- [x] en/Cookies
+- [x] en/Eventos
+- [x] en/Detalhes de Eventos
+- [x] en/Contatos
+- [x] en/Notícias
+- [x] en/Termos de uso
+- [x] en/Página de erro
 
 ---
 
@@ -85,7 +95,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 ├── detalhesevento.php # Página Detalhes de Eventos
 ├── enviar_email.php   # Ficheiro de apoio á pagina de contactos
 ├── eventos.php        # PáginaEventos
-├── index.html         # Página inicial
+├── index.php         # Página inicial
 ├── noticias.php       # Página Noticias
 ├── scraper.php        # Ficheiro de apoio á pagina de noticias
 ├── sobre_nos.php      # Página Sobre Nós
