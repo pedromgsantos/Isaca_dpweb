@@ -24,7 +24,7 @@ if (!$evento) {
 ?>
 <?php 
 if (empty($_GET['id'])) {
-    header('Location:index.html');
+    header('Location: index.php');
     die();
 } else{
     $id = $_GET['id'];
