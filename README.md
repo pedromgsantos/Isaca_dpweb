@@ -49,20 +49,19 @@ Este site foi projetado para:
 - [x] Cookies
 - [x] Eventos
 - [x] Detalhes de Eventos
-- [x] Contatos
+- [x] Contactos
 - [x] Notícias
 - [x] Termos de uso
-- [x] Página de erro
+- [x] Página de erro 404
 - [x] en/Index
-- [x] en/Sobre Nós
-- [x] en/Certificados
+- [x] en/About us
+- [x] en/Certificates
 - [x] en/Cookies
-- [x] en/Eventos
-- [x] en/Detalhes de Eventos
-- [x] en/Contatos
-- [x] en/Notícias
-- [x] en/Termos de uso
-- [x] en/Página de erro
+- [x] en/Events
+- [x] en/Event Details
+- [x] en/Contacts
+- [x] en/News
+- [x] en/Terms of use
 
 ---
 
