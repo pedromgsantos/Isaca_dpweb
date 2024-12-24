@@ -184,7 +184,7 @@
                 <div class="row d-block d-lg-none text-center ms-auto mt-3">
                     <p class ="mb-5 mt-4"style="color:#000;font-size: 20px;">É formado por alunos que frequentam o mestrado ADSAD, da Pós graduação de Auditoria, Risco e Controlo de SI e da licenciatura em informática de gestão. O objetivo do grupo é
                         educar e tornar os alunos conscientes das tendências emergentes no SI / TI Auditoria e Assurance, de Segurança e de SI / TI governança. O grupo tem a opotunidade de participar em tudo o que a ISACA organiza.</p>
-                    <a class= "" href="sobre_nos.html" class = "mt-5"style="padding: 15px 25px; border-radius: 47px; background: #70B540; color: #fff; text-decoration: none; text-align: center;">Saber Mais</a>
+                    <a class= "" href="sobre_nos.php" class = "mt-5"style="padding: 15px 25px; border-radius: 47px; background: #70B540; color: #fff; text-decoration: none; text-align: center;">Saber Mais</a>
                     </p>
                 </div>
         
