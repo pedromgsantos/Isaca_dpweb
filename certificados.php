@@ -479,7 +479,7 @@
       </div>
            <!--Card 4-->
       <div class="col-12 col-sm-6 col-md-3">
-        <a href="https://www.isaca.org/training-and-events/conferences" class="text-decoration-none">
+        <a href="https://www.isaca.org/training-and-events" class="text-decoration-none">
         <div class="card_cert mb-4 ">
           <img class="card-img" src="imagens/card-cert-4.png" alt="Imagem do card 1">
           <div style=" color: black;" >
@@ -537,7 +537,7 @@
       </div>
            <!--Card 4 mobile-->
       <div class="col-12 col-sm-6 col-md-3">
-        <a href="https://www.isaca.org/training-and-events/conferences" class="text-decoration-none">
+        <a href="https://www.isaca.org/training-and-events" class="text-decoration-none">
         <div style="margin: auto;" class="card_cert-mobile mb-4 ">
           <img class="card-img" src="imagens/card-cert-4.png" alt="Imagem do card 1">
           <div style=" color: black;" class="card-body">
