@@ -502,7 +502,7 @@
         <div style="margin: auto;"class="card_cert-mobile mb-4 ">
           <img  class="card-img" src="imagens/card-cert-1.png" alt="Imagem do card 1">
           <div style=" color: black;" class="card-body">
-            <h >webpage</h>
+            <p>webpage</p>
             <h5 >Conferencias</h5>
             <p >Participe numa próxima conferência da ISACA para fazer networking, aprender com especialistas, ganhar créditos CPE e progredir na sua carreira em IS/IT.</p>
           </div>
@@ -515,7 +515,7 @@
             <div style="margin: auto;" class="card_cert-mobile mb-4 ">
             <img class="card-img" src="imagens/card-cert-2.png" alt="Imagem do card 1">
             <div style=" color: black;" class="card-body">
-            <h >webpage</h>
+            <p>webpage</p>
             <h5 >Aprenda à Sua Maneira</h5>
             <p >Escolha a formação que se adapta aos seus objetivos, horário e preferências de aprendizagem.</p>
           </div>
@@ -528,7 +528,7 @@
         <div style="margin: auto;" class="card_cert-mobile mb-4 ">
           <img class="card-img" src="imagens/card-cert-3.png" alt="Imagem do card 1">
           <div style=" color: black;" class="card-body">
-            <h >webinar</h>
+            <p>webinar</p>
             <h5 >Próximos Webinars</h5>
             <p >Obtenha novas ferramentas, insights ou uma nova perspetiva sobre um desafio num webinar de 60 minutos da ISACA.</p>
           </div>
@@ -541,7 +541,7 @@
         <div style="margin: auto;" class="card_cert-mobile mb-4 ">
           <img class="card-img" src="imagens/card-cert-4.png" alt="Imagem do card 1">
           <div style=" color: black;" class="card-body">
-            <h >webpage</h>
+            <p>webpage</p>
             <h5 >Formações e Eventos ISACA</h5>
             <p >Experiências práticas são muitas vezes a melhor forma de aprender. Ganhe créditos CPE adicionais e faça networking com outros profissionais de IT nestes eventos. Veja os detalhes!</p>
           </div>
