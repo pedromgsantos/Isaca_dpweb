@@ -54,6 +54,15 @@ Este site foi projetado para:
 - [x] Termos de uso
 - [x] Página de erro
 - [x] en/Index
+- [x] en/Sobre Nós
+- [x] en/Certificados
+- [x] en/Cookies
+- [x] en/Eventos
+- [x] en/Detalhes de Eventos
+- [x] en/Contatos
+- [x] en/Notícias
+- [x] en/Termos de uso
+- [x] en/Página de erro
 
 ---
 
