@@ -72,8 +72,10 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 ## 📂 Estrutura do Repositório
 
 ```plaintext
-├── /Imagens           # Recursos estáticos (imagens, ícones, etc.)
 ├── /css               # Arquivos de estilo Bootstrap
+├── /en                # Páginas em inglês
+├── /imagens           # Recursos estáticos (imagens, ícones, etc.)
+├── /includes          # Arquivos PHP
 ├── /js                # Scripts JavaScript Bootsrap
 ├── 404.php            # Página erro
 ├── README.md          # Documentação
@@ -84,9 +86,9 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 ├── enviar_email.php   # Ficheiro de apoio á pagina de contactos
 ├── eventos.php        # PáginaEventos
 ├── index.html         # Página inicial
-├── isaca1.sql         # Báse de Dados
 ├── noticias.php       # Página Noticias
 ├── scraper.php        # Ficheiro de apoio á pagina de noticias
 ├── sobre_nos.php      # Página Sobre Nós
 ├── styles.css         # Ficheiro de CSS de apoio às restantes páginas
-└── termos_de_uso.html # Página Termos de uso
+├── termos_de_uso.html # Página Termos de uso
+└── web1.sql           # Báse de Dados
