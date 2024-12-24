@@ -53,6 +53,7 @@ Este site foi projetado para:
 - [x] Notícias
 - [x] Termos de uso
 - [x] Página de erro
+- [x] en/Index
 
 ---
 
