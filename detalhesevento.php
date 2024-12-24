@@ -3,7 +3,7 @@ require('includes/connection.php');
 
 // Verifica se o parâmetro 'id' foi passado
 if (!isset($_GET['id']) || empty($_GET['id'])) {
-    header("Location: Isaca_dpweb/404.php");
+    header("Location: 404.php");
     exit;
 }
 
@@ -18,7 +18,7 @@ $evento = $stmt->fetchObject();
 
 if (!$evento) {
     // Se o evento não existir, redireciona para a página de erro
-    header("Location: /Isaca_dpweb/404.php");
+    header("Location: 404.php");
     exit;
 }
 ?>
