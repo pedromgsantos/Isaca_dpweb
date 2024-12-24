@@ -587,7 +587,7 @@
             <p class="Faixa-title" style="font-size: 20px;">ESTAMOS ANSIOSOS POR TRABALHAR CONTIGO!</p>
     </div>
             
-          <?php require('includes/footer.php') ?>  
+    <?php require('includes/footer.php') ?>  
 
   <script>
       // Perguntas e respostas
