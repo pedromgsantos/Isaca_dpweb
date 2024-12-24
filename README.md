@@ -92,11 +92,11 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 ├── contactos.php      # Página Contactos
 ├── cookies.html       # Página Cookies
 ├── detalhesevento.php # Página Detalhes de Eventos
-├── enviar_email.php   # Ficheiro de apoio á pagina de contactos
+├── enviar_email.php   # Ficheiro de apoio à pagina de contactos
 ├── eventos.php        # PáginaEventos
 ├── index.php          # Página inicial
 ├── noticias.php       # Página Noticias
-├── scraper.php        # Ficheiro de apoio á pagina de noticias
+├── scraper.php        # Ficheiro de apoio à pagina de noticias (scraper)
 ├── sobre_nos.php      # Página Sobre Nós
 ├── styles.css         # Ficheiro de CSS de apoio às restantes páginas
 ├── termos_de_uso.html # Página Termos de uso
