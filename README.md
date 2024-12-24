@@ -101,4 +101,4 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 ├── sobre_nos.php      # Página Sobre Nós
 ├── styles.css         # Ficheiro de CSS de apoio às restantes páginas
 ├── termos_de_uso.html # Página Termos de uso
-└── web1.sql           # Báse de Dados
+└── web1.sql           # Base de Dados
