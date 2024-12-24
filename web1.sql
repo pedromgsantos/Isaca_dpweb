@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24-Dez-2024 às 11:49
+-- Tempo de geração: 24-Dez-2024 às 12:08
 -- Versão do servidor: 10.4.32-MariaDB
 -- versão do PHP: 8.0.30
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `isaca1`
+-- Banco de dados: `web1`
 --
 
 -- --------------------------------------------------------
@@ -72,7 +72,8 @@ INSERT INTO `contactos` (`id`, `nome`, `email`, `ano`, `categoria`, `curso`, `as
 (25, 'asd', 'asdas@pedro.com', '', '', '', 'Outro', 'asd', '2024-12-23 22:53:03'),
 (26, '123', '123@gmail.com', '', '', '', 'Outro', '123', '2024-12-23 22:53:23'),
 (35, 'Pedro Santos', 'ppedro.ssantos21@gmail.com', '', '', '', 'Certificados', 'Quero saber sobre o CISA', '2024-12-24 10:47:54'),
-(36, 'Pedro Santos', 'ppedro.ssantos21@gmail.com', '', '', '', 'Outro', 'Hello1', '2024-12-24 10:48:10');
+(36, 'Pedro Santos', 'ppedro.ssantos21@gmail.com', '', '', '', 'Outro', 'Hello1', '2024-12-24 10:48:10'),
+(37, 'Pedro Santos', 'ppedro.ssantos21@gmail.com', '', '', '', 'Outro', 'quero saber mais', '2024-12-24 11:05:05');
 
 -- --------------------------------------------------------
 
@@ -122,7 +123,8 @@ INSERT INTO `newsletter` (`nome`, `apelido`, `email`) VALUES
 ('Pedro???????????', 'Santos', 'ppedro.ssantos21@gmail.com'),
 ('Pedro', 'Santos', 'ppedro.ssantos21@gmail.com22222'),
 ('joao', 'da rede', 'joaodarede@gmail.com'),
-('jonny', 'de la cruz', 'jooa@pedor.com');
+('jonny', 'de la cruz', 'jooa@pedor.com'),
+('pedro', 'Santos', 'ppedro.ssantos21@gmail.com');
 
 --
 -- Índices para tabelas despejadas
@@ -160,7 +162,7 @@ ALTER TABLE `comentarios`
 -- AUTO_INCREMENT de tabela `contactos`
 --
 ALTER TABLE `contactos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT de tabela `eventos`
