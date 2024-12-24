@@ -47,34 +47,48 @@ Este site foi projetado para:
 - [x] Sobre Nós
 - [x] Certificados
 - [x] Cookies
-- [ ] Eventos
-- [ ] Detalhes de Eventos
-- [ ] Contatos
-- [ ] Notícias
-- [ ] Termos de uso
-- [ ] Página de erro
+- [x] Eventos
+- [x] Detalhes de Eventos
+- [x] Contatos
+- [x] Notícias
+- [x] Termos de uso
+- [x] Página de erro
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
 Este projeto foi desenvolvido utilizando as seguintes tecnologias:
-- **HTML5**: Estrutura do site..
+- **HTML5**: Estrutura do site.
+- **PHP**: Processamento de dados no servidor, criação de páginas dinâmicas e interação com bases de dados.
+- **SQL**: Manipulação e gestão da base de dados.
 - **CSS**: Estilização e layout.
 - **JavaScript**: Funcionalidades interativas.
 - **Bootstrap**: Framework para design responsivo.
+- **cURL**: Biblioteca utilizada para realizar pedidos HTTP e obter dados de fontes externas.
 
 ---
 
 ## 📂 Estrutura do Repositório
 
 ```plaintext
-├── /Imagens          # Recursos estáticos (imagens, ícones, etc.)
-├── /css              # Arquivos de estilo Bootstrap
-├── /js               # Scripts JavaScript Bootsrap
-├── README.md         # Documentação
-├── certificados.html # Página Cerfificados
-├── cookies.html      # Página Cookies
-├── index.html        # Página inicial
-├── sobre_nos.html    # Página Sobre Nós
-└── styles.css        # Ficheiro de CSS de apoio às restantes páginas
+├── /css               # Arquivos de estilo Bootstrap
+├── /en                # Páginas em inglês
+├── /imagens           # Recursos estáticos (imagens, ícones, etc.)
+├── /includes          # Arquivos PHP
+├── /js                # Scripts JavaScript Bootsrap
+├── 404.php            # Página erro
+├── README.md          # Documentação
+├── certificados.php   # Página Cerfificados
+├── contactos.php      # Página Contactos
+├── cookies.html       # Página Cookies
+├── detalhesevento.php # Página Detalhes de Eventos
+├── enviar_email.php   # Ficheiro de apoio á pagina de contactos
+├── eventos.php        # PáginaEventos
+├── index.html         # Página inicial
+├── noticias.php       # Página Noticias
+├── scraper.php        # Ficheiro de apoio á pagina de noticias
+├── sobre_nos.php      # Página Sobre Nós
+├── styles.css         # Ficheiro de CSS de apoio às restantes páginas
+├── termos_de_uso.html # Página Termos de uso
+└── web1.sql           # Báse de Dados
