@@ -40,7 +40,7 @@
                     <a href="eventos.php" class="nav-link me-3">Eventos</a>
                     <a href="certificados.php" class="nav-link me-3">Certificados</a>
                     <a href="contactos.php" class="nav-link me-3">Contactos</a>
-                    <a href="index.php" class="nav-link me-3">
+                    <a href="en/about_us.php" class="nav-link me-3">
                         <img src="https://flagcdn.com/w40/gb.png" alt="English" style="width: 30px; height: auto;">
                     </a>
                 </div>
@@ -107,11 +107,8 @@
         </div>
     </div>  
 
-    <div id="hino" class="estatisticas" 
-    style="height: auto; width: 100%; background-size: cover; background: rgb(15,105,160); 
-    background: linear-gradient(35deg, rgba(15,105,160,1) 0%, rgba(23,71,122,1) 15%, 
-    rgba(29,45,92,1) 30%, rgba(29,45,92,1) 60%, rgba(39,93,112,1) 85%, rgba(55,131,114,1) 100%);
-    display: flex; flex-wrap: wrap; justify-content: center; align-items: center; padding: 20px 0;">
+    <!-- ISACA BABYY -->
+    <div id="hino" class="estatisticas" style="height: auto; width: 100%; background-size: cover; background: rgb(15,105,160); background: linear-gradient(35deg, rgba(15,105,160,1) 0%, rgba(23,71,122,1) 15%, rgba(29,45,92,1) 30%, rgba(29,45,92,1) 60%, rgba(39,93,112,1) 85%, rgba(55,131,114,1) 100%);display: flex; flex-wrap: wrap; justify-content: center; align-items: center; padding: 20px 0;">
         <div style="text-align: center; margin: 10px; flex: 1 1 300px; max-width: 600px; background: none;">
             <h2 class="display-3 mb-4" style="text-align: center; font-weight: 600; color: #ffffff; font-family: 'Outfit'; background: none;">E há muito mais!</h2>
             <h2 class="display-3 " style="text-align: center; font-weight: 600; color: #ffffff; font-family: 'Outfit'; background: none;">A ISACA até tem um hino próprio.</h2>
@@ -128,12 +125,13 @@
         </div>
     </div>
 
-    <div style="color: #35B390;" class = "mt-4 ">
+    <!-- Ainda com dúvidas? -->
+    <div style="color: #35B390;" class = "mt-5 ">
         <h1 style="text-align: center; font-weight: bolder; font-size:57px ;">AINDA COM DÚVIDAS?</h1>
     </div>
 
     <div style="text-align: center;" class="button mb-5">
-        <a href="contactos.html" target="_blank" class="cta-button">
+        <a href="contactos.php" class="cta-button">
             CONTACTA-NOS
         </a>
     </div>

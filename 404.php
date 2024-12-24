@@ -41,18 +41,19 @@
         </nav>
     </header>
 
-    <div style="font-family: Roboto, sans-serif; display: flex; justify-content: center; align-items: center; background-color: #F5F5F5; margin-top: 100px;">
-        <div style="display: flex; align-items: center; gap: 80px; text-align: left;">
-            <!-- Imagem do personagem -->
-            <div>
-                <img src="imagens/404.png" alt="Big Foot Illustration" style="width: 500px; height: auto;">
+    <!-- Conteúdo -->
+    <div class="container d-flex align-items-center justify-content-center ">
+        <div class="row align-items-center text-center text-lg-start">
+            <!-- Imagem do 404-->
+            <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                <img src="imagens/404.png" alt="Big Foot Illustration" class="img-fluid" style="max-width: 100%; height: auto;">
             </div>
-            
+
             <!-- Texto e botão -->
-            <div>
-                <h1 style="font-size: 64px; font-weight: bold; color: #0D2C6C; margin-bottom: 30px;">OOPS!</h1>
-                <p style="font-size: 32px; color: #6c6c6c; margin-bottom: 40px;">Não foi encontrada nenhuma página!</p>
-                <a href="index.html" style="display: inline-block; padding: 10px 30px; background-color: #0D2C6C; color: #FFFFFF; text-decoration: none; font-size: 24px; font-weight: bold; border-radius: 10px;">Voltar à página inicial</a>
+            <div class="col-12 col-lg-6">
+                <h1 class="display-3 fw-bold " style="color: #0D2C6C">OOPS!</h1>
+                <p class="fs-4 text-muted">Não foi encontrada nenhuma página!</p>
+                <a href="index.php" class="btn btn-lg mt-3 px-4 py-2 fw-bold" style="background-color: #0D2C6C; color: #FFFFFF">Voltar à página inicial</a>
             </div>
         </div>
     </div>

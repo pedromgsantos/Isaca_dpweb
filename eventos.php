@@ -54,7 +54,7 @@
                     <a href="eventos.php" class="nav-link active me-3">Eventos</a>
                     <a href="certificados.php" class="nav-link me-3">Certificados</a>
                     <a href="contactos.php" class="nav-link me-3">Contactos</a>
-                    <a href="index.php" class="nav-link me-3">
+                    <a href="en/events.php" class="nav-link me-3">
                         <img src="https://flagcdn.com/w40/gb.png" alt="English" style="width: 30px; height: auto;">
                     </a>
                 </div>
@@ -62,12 +62,14 @@
         </nav>
     </header>
 
+    <!-- titulo -->
     <div>
         <h1 style="text-align: center; font-weight: 600; font-size:67px ;color: #0D2C6C; font-family: 'Outfit';">Eventos</h1>
     </div>
 
     <?php require('includes/connection.php') ?>  
 
+    <!-- Eventos dinâmicos -->
     <div class="container my-5">
         <div class="row row-cols-1 row-cols-md-2 g-4">
         <?php
@@ -85,7 +87,7 @@
                             <div class="card-body">
                                 <h5 class="card-title fw-bold"><?= $evento->nome ?></h5>
                                 <p class="card-text text-muted">Data: <?= $evento->data ?></p>
-                                <p class="card-text">Descrição: <?= $evento->descricao ?></p>
+                                <p class="card-text"> <strong>Descrição: </strong><?= $evento->descricao ?></p>
                                 <a href="detalhesevento.php?id=<?= $evento->id ?>" class="cta-button" style="text-align: center; padding: 8px 15px">Detalhes</a>
                             </div>
                         </div>

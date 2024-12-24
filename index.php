@@ -12,6 +12,7 @@
     <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
     <link rel ="icon" href = "imagens/ISACA_logo.png">
     <link rel="stylesheet" href="styles.css">
+    
     <style>
         body {
             font-family: 'Roboto';
@@ -41,7 +42,7 @@
                     <a href="eventos.php" class="nav-link me-3">Eventos</a>
                     <a href="certificados.php" class="nav-link me-3">Certificados</a>
                     <a href="contactos.php" class="nav-link me-3">Contactos</a>
-                    <a href="index.php" class="nav-link me-3">
+                    <a href="en/index.php" class="nav-link me-3">
                         <img src="https://flagcdn.com/w40/gb.png" alt="English" style="width: 30px; height: auto;">
                     </a>
                 </div>
@@ -165,7 +166,7 @@
                         ISACA STUDENT GROUP</h2>
                     <p style="color:#000;font-size: 20px;">É formado por alunos que frequentam o mestrado ADSAD, da Pós graduação de Auditoria, Risco e Controlo de SI e da licenciatura em informática de gestão. O objetivo do grupo é
                         educar e tornar os alunos conscientes das tendências emergentes no SI / TI Auditoria e Assurance, de Segurança e de SI / TI governança. O grupo tem a oportunidade de participar em tudo o que a ISACA organiza.</p>
-                    <a class="btn-sobre" href="sobre_nos.html">Saber Mais</a>
+                    <a class="btn-sobre" href="sobre_nos.php">Saber Mais</a>
                 </div>
 
                 <div class="col-1 d-none d-lg-block">
@@ -282,12 +283,11 @@
             </div>
     
             <!-- Botão :) -->
-            <a href="certificados.html" target="_blank" class="cta-button mt-lg-5 mt-3">
+            <a href="certificados.php" class="cta-button mt-lg-5 mt-3">
                 CONHECE MAIS AQUI
             </a>
         </div>
     </section>
-
 
     <!-- Eventos -->
     <section id="eventos" class="carousel slide" data-bs-ride="carousel">
@@ -357,8 +357,62 @@
           </button>
         </div>
     </section>
+
+    <!-- FAQ -->
+    <div class="container mb-5" style="max-width: 1200px;">
+        <h2 class = "mb-3" style="text-align: center; font-weight: 600; font-size:45px ;color: #0D2C6C; font-family: 'Outfit';">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+            <!-- O FAQ vai ser inserido aqui, através do JavaScript -->
+        </div>
+    </div>
       
     <?php require('includes/footer.php') ?>  
+
+    <!-- FAQ -->
+    <script>
+        // FAQ - dados
+        const faqData = [
+            {
+                question: "O que é um ISACA Student Group?",
+                answer: "Os ISACA Student Groups (ISGs) são grupos que levam os alunos para além do que o ensino tradicional lhes proporciona, como networking, aprender através dos outros colegas ou profissionais, organizar eventos e muitas outras atividades. <br> <br>O ISACA Student Group do ISCAC tem o objetivo de aumentar, e conectar os estudantes do ISCAC ao mundo de auditoria, controlo e gorvernance, realizando diversas atividades dinâmicas."
+            },
+            {
+                question: "Quem pode participar do ISACA Student Group?",
+                answer: "Qualquer aluno do ISCAC, seja de licenciatura ou mestrado, pode ingressar o grupo e trabalhar connosco!"
+            },
+            {
+                question: "Como faço para me inscrever no grupo?",
+                answer: "Para entrar no grupo, basta enviar-nos mensagem através das nossas redes sociais ou através do nosso formulário de contactos <a href='contactos.php'>aqui</a>."
+            },
+            {
+                question: "Quais as vantagens de pertencer a este ISACA Student Group?",
+                answer: "Pertencer ao ISACA Student Group do ISCAC proporciona oportunidades de networking com profissionais da área, acesso a recursos educacionais exclusivos, apoio na preparação para certificações reconhecidas internacionalmente e desenvolvimento de competências práticas em governança, auditoria e segurança de TI, ajudando a impulsionar a tua carreira no mercado."
+            }
+        ];
+
+        // Render FAQs
+        const faqAccordion = document.getElementById('faqAccordion');
+
+        faqData.forEach((faq, index) => {
+            const faqItem = document.createElement('div');
+            faqItem.classList.add('accordion-item');
+
+            faqItem.innerHTML = `
+                <h2 class="accordion-header" id="heading${index}">
+                    <button class="accordion-button ${index !== 0 ? 'collapsed' : ''}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="${index === 0}" aria-controls="collapse${index}" style="font-family: 'Outfit', sans-serif; font-size: 20px; font-weight:600;">
+                        ${faq.question}
+                    </button>
+                </h2>
+                <div id="collapse${index}" class="accordion-collapse collapse ${index === 0 ? 'show' : ''}" aria-labelledby="heading${index}" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" style="font-family: 'Roboto', sans-serif; font-size: 16px;">
+                        ${faq.answer}
+                    </div>
+                </div>
+            `;
+
+            faqAccordion.appendChild(faqItem);
+        });
+    </script>
       
     <script src="js/bootstrap.bundle.min.js"></script>
 

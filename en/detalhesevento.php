@@ -1,5 +1,5 @@
 <?php
-require('includes/connection.php');
+require('../includes/connection.php');
 
 // Verifica se o parâmetro 'id' foi passado
 if (!isset($_GET['id']) || empty($_GET['id'])) {
@@ -47,20 +47,20 @@ if (empty($_GET['id'])) {
             header('Location: ' . $_SERVER['REQUEST_URI']);
             exit();
         } else {
-            $error = "O comentário não pode estar vazio!";
+            $error = "Must not be empty!";
         }
     }
     ?>
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISACA Student Group do ISCAC</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
-    <link rel ="icon" href = "imagens/ISACA_logo.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-icons.min.css">
+    <link rel ="icon" href = "../imagens/ISACA_logo.png">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -71,11 +71,11 @@ if (empty($_GET['id'])) {
     <header class="bg-light py-3 shadow-sm">
         <div class="container d-flex justify-content-between align-items-center">
             <!-- Botão de voltar -->
-            <a href="eventos.php" class="btn btn-outline-primary d-flex align-items-center" style="font-size: 1.2rem;">
-                <i class="bi bi-arrow-left me-2" style="font-size: 1.5rem;"></i> Voltar
+            <a href="events.php" class="btn btn-outline-primary d-flex align-items-center" style="font-size: 1.2rem;">
+                <i class="bi bi-arrow-left me-2" style="font-size: 1.5rem;"></i> Back
             </a>
             <!-- Logo como imagem -->
-            <img src="imagens/LOGO1.2.png" 
+            <img src="../imagens/LOGO1.2.png" 
                 alt="ISACA Logo" 
                 style="max-width: 100%; height: auto; max-height: 100px; object-fit: contain;" 
                 class="img-fluid ms-lg-5 ms-2">
@@ -90,7 +90,7 @@ $stmt->bindValue(':id', $id);
 $stmt->execute();
 if ($stmt && $stmt->rowCount() == 1) {
     $evento = $stmt->fetchObject();
-    $imagem = filter_var($evento->imagem, FILTER_VALIDATE_URL) !== false ? $evento->imagem : 'imagens/eventos/'.$evento->imagem;
+    $imagem = filter_var($evento->imagem, FILTER_VALIDATE_URL) !== false ? $evento->imagem : '../imagens/eventos/'.$evento->imagem;
     $data = new DateTime($evento->data);
     $formatada = new IntlDateFormatter(
         'pt_pt', // Idioma
@@ -117,7 +117,7 @@ if ($stmt && $stmt->rowCount() == 1) {
 <!-- descrição mais completa e algumas imagens -->
 <div class="container">
     <div class="row">
-        <div class="col-6 fs-3 border-bottom border-dark">Descrição</div>
+        <div class="col-6 fs-3 border-bottom border-dark">Description</div>
     </div>
     <div class="row mt-3">
         <div class="col-9">
@@ -143,7 +143,7 @@ if(!$stmt || $stmt->rowCount() == 0){
 
 <div class="container">
     <div class="row">
-        <div class="col-6 fs-3 border-bottom border-dark">Comentários</div>
+        <div class="col-6 fs-3 border-bottom border-dark">Comments</div>
     </div>
     <?php
     if ($resultados) {
@@ -171,26 +171,26 @@ if(!$stmt || $stmt->rowCount() == 0){
     <!-- Formulário de comentário (apenas exibido se não foi enviado) -->
     <?php if (!isset($comentario_enviado)) { ?>
     <div class="rounded mt-5 p-4" style="background-color: #f0f0f0; border: 1px solid #dcdcdc; max-width: 600px; margin: 0 auto;">
-        <h5 style="color: #333; font-weight: bold; margin-bottom: 1rem; text-align: center;">Deixe o seu comentário:</h5>
+        <h5 style="color: #333; font-weight: bold; margin-bottom: 1rem; text-align: center;">Leave your comment:</h5>
         <form method="POST" action="">
             <!-- Campo de email opcional -->
             <div class="mb-3">
-                <label for="email" class="form-label" style="color: #495057;">Email (opcional)</label>
+                <label for="email" class="form-label" style="color: #495057;">Email (optional)</label>
                 <input type="email" name="email" id="email" class="form-control" placeholder="Seu email..." style="border-radius: 5px;">
             </div>
             <!-- Campo de comentário -->
             <div class="input-group mb-3">
-                <span class="input-group-text" style="background-color: #e9ecef; color: #495057;">Comentário</span>
+                <span class="input-group-text" style="background-color: #e9ecef; color: #495057;">Comment</span>
                 <textarea name="mensagem" class="form-control" rows="4" placeholder="Escreva aqui o seu comentário..." style="resize: none;" required></textarea>
             </div>
             <div class="form-check mb-3">
                  <input type="checkbox" name="consentimento" id="consentimento" class="form-check-input" required>
                  <label for="consentimento" class="form-check-label">
-                Concordo com os <a target="_blank" href="termos_de_uso.html">termos de uso</a> e autorizo o uso das minhas informações.
+                I agree with the <a target="_blank" href="terms_of_use.html">terms os use</a> and authorize the use of my informations.
             </div>
             <!-- Botão enviar centralizado -->
             <div style="text-align: center;">
-                <button type="submit" class="btn btn-success" style="font-weight: bold; padding: 0.5rem 2rem;">Enviar</button>
+                <button type="submit" class="btn btn-success" style="font-weight: bold; padding: 0.5rem 2rem;">Send</button>
             </div>
         </form>
     </div>
@@ -198,6 +198,6 @@ if(!$stmt || $stmt->rowCount() == 0){
     </div>
 
 <div style="height:300px;"></div>
-<script src="js/bootstrap.bundle.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

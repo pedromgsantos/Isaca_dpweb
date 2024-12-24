@@ -8,7 +8,7 @@ require('connection.php');
 
             <!-- Logo e contactos -->
             <div class="col-md-6" style="background-color: #D9D9D9">
-                <a class="navbar-brand" style="margin-top: 20px;background-color: #D9D9D9;" href="index.html">
+                <a class="navbar-brand" style="margin-top: 20px;background-color: #D9D9D9;" href="index.php">
                     <img src="imagens/LOGO2.png" alt="ISACA Student Group Logo" class="img-fluid" style="max-width: 270px;;width: auto; background-color: #D9D9D9">
                 </a>
                 
@@ -103,3 +103,4 @@ require('connection.php');
           </div>
     </div>
 </div>
+
