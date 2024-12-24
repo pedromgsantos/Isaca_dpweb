@@ -270,7 +270,7 @@ require('../includes/connection.php');
       const courseSelect = document.getElementById("course");
             
       // Limpar opções atuais
-      courseSelect.innerHTML = '<option value="" disabled selected>Selecione o curso</option>';
+      courseSelect.innerHTML = '<option value="" disabled selected>Select the course</option>';
             
       // Adicionar os cursos correspondentes
       if (program && cursos[program]) {
