@@ -1,7 +1,7 @@
 <?php
 $user = 'web';
 $pass = 'web';
-$database = 'web1';
+$database = 'grupo108';
 
 try{
     $dbh =  new PDO('mysql:host=localhost;charset=utf8;dbname='.$database, $user, $pass);
