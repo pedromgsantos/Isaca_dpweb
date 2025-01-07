@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24-Dez-2024 às 12:08
+-- Tempo de geração: 07-Jan-2025 às 22:50
 -- Versão do servidor: 10.4.32-MariaDB
 -- versão do PHP: 8.0.30
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `web1`
+-- Banco de dados: `grupo108`
 --
 
 -- --------------------------------------------------------
@@ -44,7 +44,10 @@ INSERT INTO `comentarios` (`id`, `eventoId`, `email`, `mensagem`, `date`) VALUES
 (7, 2, 'Anónimo', '123', '2024-12-10'),
 (8, 2, 'Anónimo', 'Ótima iniciativa! Tema muito interessante e cada vez mais atual.', '2024-12-10'),
 (13, 11, 'ppedro.ssantos21@gmail.com', 'gosto muito', '2024-12-23'),
-(15, 10, 'Anónimo', 'Quais ferramentas de IA vao ser usadas?', '2024-12-24');
+(15, 10, 'Anónimo', 'Quais ferramentas de IA vao ser usadas?', '2024-12-24'),
+(16, 10, 'ppedro.ssantos21@gmail.com', 'Bom dia, como me posso inscrever?', '2025-01-07'),
+(17, 11, 'Anónimo', 'Foi horrivel!', '2025-01-07'),
+(18, 11, 'Anónimo', 'Concordo com o Anónimo', '2025-01-07');
 
 -- --------------------------------------------------------
 
@@ -73,7 +76,9 @@ INSERT INTO `contactos` (`id`, `nome`, `email`, `ano`, `categoria`, `curso`, `as
 (26, '123', '123@gmail.com', '', '', '', 'Outro', '123', '2024-12-23 22:53:23'),
 (35, 'Pedro Santos', 'ppedro.ssantos21@gmail.com', '', '', '', 'Certificados', 'Quero saber sobre o CISA', '2024-12-24 10:47:54'),
 (36, 'Pedro Santos', 'ppedro.ssantos21@gmail.com', '', '', '', 'Outro', 'Hello1', '2024-12-24 10:48:10'),
-(37, 'Pedro Santos', 'ppedro.ssantos21@gmail.com', '', '', '', 'Outro', 'quero saber mais', '2024-12-24 11:05:05');
+(37, 'Pedro Santos', 'ppedro.ssantos21@gmail.com', '', '', '', 'Outro', 'quero saber mais', '2024-12-24 11:05:05'),
+(38, 'Mike', 'eduardocamposdarede@gmail.com', '', '', '', 'Outro', 'Hello', '2025-01-07 21:04:26'),
+(39, 'mIGUEL', 'ppedro.ssantos21@gmail.com', '1', 'licenciatura', 'solicitadoria e administração', 'Ser Membro ISACA', 'AA', '2025-01-07 21:04:45');
 
 -- --------------------------------------------------------
 
@@ -124,7 +129,12 @@ INSERT INTO `newsletter` (`nome`, `apelido`, `email`) VALUES
 ('Pedro', 'Santos', 'ppedro.ssantos21@gmail.com22222'),
 ('joao', 'da rede', 'joaodarede@gmail.com'),
 ('jonny', 'de la cruz', 'jooa@pedor.com'),
-('pedro', 'Santos', 'ppedro.ssantos21@gmail.com');
+('pedro', 'Santos', 'ppedro.ssantos21@gmail.com'),
+('Pedro', 'Santos', 'ppedro.ssantos21@gmail.com'),
+('Antonio', 'Santos', 'ppedro.ssantos21@gmail.com'),
+('Pedro', 'Santos', 'ppedro.ssantos21@gmail.com'),
+('pedro', 'Pedro Santos', 'ppedro.ssantos21@gmail.com'),
+('Peter', 'Saints', 'a2021138966@alumni.iscac.pt');
 
 --
 -- Índices para tabelas despejadas
@@ -156,13 +166,13 @@ ALTER TABLE `eventos`
 -- AUTO_INCREMENT de tabela `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de tabela `contactos`
 --
 ALTER TABLE `contactos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT de tabela `eventos`
