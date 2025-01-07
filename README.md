@@ -84,7 +84,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 ├── /css               # Arquivos de estilo Bootstrap
 ├── /en                # Páginas em inglês
 ├── /imagens           # Recursos estáticos (imagens, ícones, etc.)
-├── /includes          # Arquivos PHP
+├── /includes          # Arquivos php de conexão a base de dados, header e footer
 ├── /js                # Scripts JavaScript Bootsrap
 ├── 404.php            # Página erro
 ├── README.md          # Documentação
@@ -100,4 +100,4 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 ├── sobre_nos.php      # Página Sobre Nós
 ├── styles.css         # Ficheiro de CSS de apoio às restantes páginas
 ├── termos_de_uso.html # Página Termos de uso
-└── web1.sql           # Base de Dados
+└── grupo108.sql       # Base de Dados
