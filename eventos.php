@@ -78,6 +78,7 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer>
     <?php require('includes/footer.php') ?>  
     </footer>

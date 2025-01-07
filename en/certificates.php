@@ -93,6 +93,7 @@ require('../includes/connection.php');
 </head>
 <body style="background-color: #f5f5f5; max-width: 100%;">
     
+    <!--Header-->
     <?php
     $portuguese_page = "../certificados.php";
     require('../includes/headeren.php') 
@@ -560,6 +561,7 @@ require('../includes/connection.php');
             <p class="Faixa-title" style="font-size: 20px;">WE LOOK FORWARD TO WORKING WITH YOU!</p>
     </div>
             
+    <!-- Footer -->
     <footer>
     <?php require('../includes/footeren.php') ?> 
     </footer>

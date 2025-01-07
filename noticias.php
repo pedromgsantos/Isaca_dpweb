@@ -57,6 +57,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
     <?php require('includes/footer.php') ?>  
     </footer>

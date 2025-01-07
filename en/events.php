@@ -38,6 +38,7 @@ require('../includes/connection.php');
 </head> 
 <body style = "height: 1000px;background-color: #f5f5f5; max-width: 100%;" >
 
+    <!--Header-->
     <?php
     $portuguese_page = "../eventos.php";
     require('../includes/headeren.php') 
@@ -79,7 +80,7 @@ require('../includes/connection.php');
         </div>
     </div>
 
-
+    <!-- Footer -->
     <footer>
     <?php require('../includes/footeren.php') ?> 
     </footer>

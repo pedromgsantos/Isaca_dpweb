@@ -34,6 +34,7 @@ require('../includes/connection.php');
 </head>
 <body style="background-color: #f5f5f5; font-family: 'Roboto', sans-serif; margin: 0;">
 
+    <!--Header-->
     <?php
     $portuguese_page = "../noticias.php";
     require('../includes/headeren.php') 
@@ -59,6 +60,7 @@ require('../includes/connection.php');
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
     <?php require('../includes/footeren.php') ?> 
     </footer>

@@ -83,68 +83,68 @@ if (empty($_GET['id'])) {
     </header>
 
 
-<?php
-$sql = 'SELECT * FROM eventos WHERE id = :id';
-$stmt = $dbh->prepare($sql);
-$stmt->bindValue(':id', $id);
-$stmt->execute();
-if ($stmt && $stmt->rowCount() == 1) {
-    $evento = $stmt->fetchObject();
-    $imagem = filter_var($evento->imagem, FILTER_VALIDATE_URL) !== false ? $evento->imagem : 'imagens/eventos/'.$evento->imagem;
-    $data = new DateTime($evento->data);
-    $formatada = new IntlDateFormatter(
-        'pt_pt', // Idioma
-        IntlDateFormatter::FULL, // Estilo para a data completa
-        IntlDateFormatter::NONE // Sem hora
-    );
-    $eventbrite_code = $evento->eventbrite_code;
-}
-?>
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-lg-8 col-md-7">
-            <div class="display-5 fw-bold"><?= $evento->nome ?></div>
-            <p class="mt-5 fs-5 fw-bold"><i class="me-2 bi bi-calendar3"></i><?= $formatada->format($data) ?></p>
-            <p class="mt-2 fs-5"><i class="me-2 bi bi-card-text"></i><?= $evento->descricao ?></p>
-            <div style = ""><?php echo $eventbrite_code; ?></div>
+    <?php
+    $sql = 'SELECT * FROM eventos WHERE id = :id';
+    $stmt = $dbh->prepare($sql);
+    $stmt->bindValue(':id', $id);
+    $stmt->execute();
+    if ($stmt && $stmt->rowCount() == 1) {
+        $evento = $stmt->fetchObject();
+        $imagem = filter_var($evento->imagem, FILTER_VALIDATE_URL) !== false ? $evento->imagem : 'imagens/eventos/'.$evento->imagem;
+        $data = new DateTime($evento->data);
+        $formatada = new IntlDateFormatter(
+            'pt_pt', // Idioma
+            IntlDateFormatter::FULL, // Estilo para a data completa
+            IntlDateFormatter::NONE // Sem hora
+        );
+        $eventbrite_code = $evento->eventbrite_code;
+    }
+    ?>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8 col-md-7">
+                <div class="display-5 fw-bold"><?= $evento->nome ?></div>
+                <p class="mt-5 fs-5 fw-bold"><i class="me-2 bi bi-calendar3"></i><?= $formatada->format($data) ?></p>
+                <p class="mt-2 fs-5"><i class="me-2 bi bi-card-text"></i><?= $evento->descricao ?></p>
+                <div style = ""><?php echo $eventbrite_code; ?></div>
+            </div>
+            <div class="col-lg-4 col-md-5 mt-4 mb-4 mt-lg-1 mb-lg-1">
+                <img class="img-fluid w-100 rounded" src="<?= $imagem ?>" alt="imagem do evento">
+            </div> 
         </div>
-        <div class="col-lg-4 col-md-5 mt-4 mb-4 mt-lg-1 mb-lg-1">
-            <img class="img-fluid w-100 rounded" src="<?= $imagem ?>" alt="imagem do evento">
-        </div> 
     </div>
-</div>
 
-<!-- descrição mais completa e algumas imagens -->
-<div class="container">
-    <div class="row">
-        <div class="col-6 fs-3 border-bottom border-dark">Descrição</div>
+    <!-- descrição mais completa e algumas imagens -->
+    <div class="container">
+        <div class="row">
+            <div class="col-6 fs-3 border-bottom border-dark">Descrição</div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-9">
+                <p class="lh-lg fs-5">
+                    <?= $evento->texto ?>
+                </p>
+            </div>   
+        </div>
     </div>
-    <div class="row mt-3">
-        <div class="col-9">
-            <p class="lh-lg fs-5">
-                <?= $evento->texto ?>
-            </p>
-        </div>   
-    </div>
-</div>
 
-<!-- comentários -->
-<?php
-$sql = 'SELECT * FROM comentarios WHERE eventoId = :i';
-$stmt = $dbh->prepare($sql);
-$stmt->bindValue(':i', $id);
-$stmt->execute();
-if(!$stmt || $stmt->rowCount() == 0){
-    $resultados = false;
-}else {
-    $resultados = true;
-}
-?>
+    <!-- comentários -->
+    <?php
+    $sql = 'SELECT * FROM comentarios WHERE eventoId = :i';
+    $stmt = $dbh->prepare($sql);
+    $stmt->bindValue(':i', $id);
+    $stmt->execute();
+    if(!$stmt || $stmt->rowCount() == 0){
+        $resultados = false;
+    }else {
+        $resultados = true;
+    }
+    ?>
 
-<div class="container">
-    <div class="row">
-        <div class="col-6 fs-3 border-bottom border-dark">Comentários</div>
-    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 fs-3 border-bottom border-dark">Comentários</div>
+        </div>
     <?php
     if ($resultados) {
         while ($c = $stmt->fetchObject()) {

@@ -24,7 +24,8 @@ require('../includes/connection.php');
 </head>
 <body style="background-color: #f5f5f5; max-width: 100%;"></body>
 
-  <?php
+    <!--Header-->
+    <?php
     $portuguese_page = "../contactos.php";
     require('../includes/headeren.php') 
     ?>
@@ -127,6 +128,7 @@ require('../includes/connection.php');
       </div>
     </div>
 
+    <!-- Footer -->
     <footer>
     <?php require('../includes/footeren.php') ?> 
     </footer>

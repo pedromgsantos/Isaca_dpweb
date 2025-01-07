@@ -564,7 +564,8 @@
     <div class="column mt-5 d-block d-lg-none" >
             <p class="Faixa-title" style="font-size: 20px;">ESTAMOS ANSIOSOS POR TRABALHAR CONTIGO!</p>
     </div>
-            
+          
+    <!-- Footer -->
     <footer>
     <?php require('includes/footer.php') ?>  
     </footer>
