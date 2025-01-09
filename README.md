@@ -81,11 +81,11 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 ## 📂 Estrutura do Repositório
 
 ```plaintext
-├── /css               # Arquivos de estilo Bootstrap
+├── /css               # Arquivos de estilo CSS
 ├── /en                # Páginas em inglês
 ├── /imagens           # Recursos estáticos (imagens, ícones, etc.)
 ├── /includes          # Arquivos php de conexão a base de dados, header e footer
-├── /js                # Scripts JavaScript Bootsrap
+├── /js                # Scripts JavaScript 
 ├── 404.php            # Página erro
 ├── README.md          # Documentação
 ├── admineventos.php   # Painel de administração da página eventos
