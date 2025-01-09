@@ -11,12 +11,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $data = $_POST['data'];
                 $descricao = $_POST['descricao'];
                 $imagem = $_POST['imagem'];
+                $texto = $_POST['texto'];
                 $visivel = isset($_POST['visivel']) ? 1 : 0;
 
-                $sql = "INSERT INTO eventos (nome, data, descricao, imagem, visivel) VALUES (?, ?, ?, ?, ?)";
+                $sql = "INSERT INTO eventos (nome, data, descricao, imagem, texto, visivel) VALUES (?, ?, ?, ?, ?, ?)";
                 $stmt = $dbh->prepare($sql);
-                $stmt->execute([$nome, $data, $descricao, $imagem, $visivel]);
-
+                $stmt->execute([$nome, $data, $descricao, $imagem, $texto, $visivel]);
+ 
                 // Redirecionar após adicionar o evento, para evitar duplicações de adição
                 header("Location: " . $_SERVER['PHP_SELF']);
                 exit;
@@ -38,11 +39,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $data = $_POST['data'];
                 $descricao = $_POST['descricao'];
                 $imagem = $_POST['imagem'];
+                $texto = $_POST['texto'];
                 $visivel = isset($_POST['visivel']) ? 1 : 0;
 
-                $sql = "UPDATE eventos SET nome=?, data=?, descricao=?, imagem=?, visivel=? WHERE id=?";
+                $sql = "UPDATE eventos SET nome=?, data=?, descricao=?, imagem=?, texto=?, visivel=? WHERE id=?";
                 $stmt = $dbh->prepare($sql);
-                $stmt->execute([$nome, $data, $descricao, $imagem, $visivel, $id]);
+                $stmt->execute([$nome, $data, $descricao, $imagem, $texto, $visivel, $id]);
                 
                 header("Location: " . $_SERVER['PHP_SELF']);
                 exit;
@@ -91,6 +93,10 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="mb-3">
                         <label for="descricao" class="form-label">Descrição</label>
                         <textarea name="descricao" id="descricao" class="form-control" rows="3" placeholder="Descrição do evento" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="texto" class="form-label">Texto Completo</label>
+                        <textarea name="texto" id="texto" class="form-control" rows="5" placeholder="Insira o texto completo do evento" required></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="imagem" class="form-label">Imagem</label>
@@ -171,6 +177,10 @@ $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                                 <div class="mb-3">
                                                     <label for="descricao<?= $row['id'] ?>" class="form-label">Descrição</label>
                                                     <textarea name="descricao" id="descricao<?= $row['id'] ?>" class="form-control" rows="3" required><?= $row['descricao'] ?></textarea>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="texto<?= $row['id'] ?>" class="form-label">Texto Completo</label>
+                                                    <textarea name="texto" id="texto<?= $row['id'] ?>" class="form-control" rows="5" required><?= $row['texto'] ?></textarea>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="imagem<?= $row['id'] ?>" class="form-label">Imagem</label>
