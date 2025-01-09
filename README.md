@@ -88,6 +88,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 ├── /js                # Scripts JavaScript Bootsrap
 ├── 404.php            # Página erro
 ├── README.md          # Documentação
+├── admineventos.php   # Painel de administração da página eventos
 ├── certificados.php   # Página Cerfificados
 ├── contactos.php      # Página Contactos
 ├── cookies.html       # Página Cookies
