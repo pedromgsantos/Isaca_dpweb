@@ -99,6 +99,5 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 ├── noticias.php       # Página Noticias
 ├── scraper.php        # Ficheiro de apoio à pagina de noticias (scraper)
 ├── sobre_nos.php      # Página Sobre Nós
-├── styles.css         # Ficheiro de CSS de apoio às restantes páginas
 ├── termos_de_uso.html # Página Termos de uso
 └── grupo108.sql       # Base de Dados
