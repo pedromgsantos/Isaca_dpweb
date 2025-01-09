@@ -570,97 +570,136 @@
     <?php require('includes/footer.php') ?>  
     </footer>
 
-  <script>
-      // Perguntas e respostas
-      const questions = [
-          {
-              question: "Qual das áreas tens mais interesse?",
-              options: ["Segurança da Informação", "Governança de TI", "Gestão de Riscos"],
-              next: [1, 2, 3]
-          },
-          {
-              question: "Tens experiência na área de Segurança da Informação?",
-              options: ["Sim", "Não"],
-              next: [4, 5]
-          },
-          {
-              question: "Tens experiência em Governança de TI?",
-              options: ["Sim", "Não"],
-              next: [6, 7]
-          },
-          {
-              question: "Tens experiência em Gestão de Riscos?",
-              options: ["Sim", "Não"],
-              next: [8, 9]
-          },
-          {
-              question: "Qual dos tópicos te desperta mais interesse?",
-              options: ["Auditoria", "Gestão"],
-              results: ["CISA", "CISM"]
-          },
-          {
-              question: "Desejas explorar algo prático?",
-              options: ["Sim", "Não"],
-              results: ["CSX-P", "CET"]
-          },
-          {
-              question: "Tens interesse em liderar estratégias de TI?",
-              options: ["Sim", "Não"],
-              results: ["CGEIT", "CRISC"]
-          },
-          {
-              question: "Tens conhecimento de conceitos básicos eM TI?",
-              options: ["Sim", "Não"],
-              results: ["ITCA", "CET"]
-          },
-          {
-              question: "Tens preferencia em auditoria de riscos?",
-              options: ["Sim", "Não"],
-              results: ["CRISC", "CDPSE"]
-          },
-          {
-              question: "Tens interesse em aprender sobre privacidade de dados?",
-              options: ["Sim", "Não"],
-              results: ["CDPSE", "CET"]
-          }
-      ];
+<script>
+    // Perguntas e respostas
+    const questions = [
+        {
+            question: "Qual das áreas tens mais interesse?",
+            options: ["Segurança da Informação", "Governança de TI", "Gestão de Riscos"],
+            next: [1, 2, 3]
+        },
+        {
+            question: "Tens experiência na área de Segurança da Informação?",
+            options: ["Sim", "Não"],
+            next: [4, 5]
+        },
+        {
+            question: "Tens experiência em Governança de TI?",
+            options: ["Sim", "Não"],
+            next: [6, 7]
+        },
+        {
+            question: "Tens experiência em Gestão de Riscos?",
+            options: ["Sim", "Não"],
+            next: [8, 9]
+        },
+        {
+            question: "Qual dos tópicos te desperta mais interesse?",
+            options: ["Auditoria", "Gestão"],
+            results: ["CISA", "CISM"]
+        },
+        {
+            question: "Desejas explorar algo prático?",
+            options: ["Sim", "Não"],
+            results: ["CSX-P", "CET"]
+        },
+        {
+            question: "Tens interesse em liderar estratégias de TI?",
+            options: ["Sim", "Não"],
+            results: ["CGEIT", "CRISC"]
+        },
+        {
+            question: "Tens conhecimento de conceitos básicos em TI?",
+            options: ["Sim", "Não"],
+            results: ["ITCA", "CET"]
+        },
+        {
+            question: "Tens preferência em auditoria de riscos?",
+            options: ["Sim", "Não"],
+            results: ["CRISC", "CDPSE"]
+        },
+        {
+            question: "Tens interesse em aprender sobre privacidade de dados?",
+            options: ["Sim", "Não"],
+            results: ["CDPSE", "CET"]
+        }
+    ];
 
-      const resultDiv = document.getElementById("result");
-      const questionDiv = document.getElementById("question");
-      const optionsDiv = document.getElementById("options");
+    const resultDiv = document.getElementById("result");
+    const questionDiv = document.getElementById("question");
+    const optionsDiv = document.getElementById("options");
 
-      let currentQuestion = 0;
+    let currentQuestion = 0;
+    let questionHistory = []; // Armazena o histórico das perguntas anteriores
 
-      function renderQuestion() {
-          const q = questions[currentQuestion];
-          questionDiv.textContent = q.question;
-          optionsDiv.innerHTML = "";
-          resultDiv.textContent = "";
+    function renderQuestion() {
+        const q = questions[currentQuestion];
+        questionDiv.textContent = q.question;
+        optionsDiv.innerHTML = "";
+        resultDiv.textContent = "";
 
-          q.options.forEach((option, index) => {
-              const button = document.createElement("button");
-              button.textContent = option;
-              button.className = "btn btn-primary btn-option";
-              button.onclick = () => {
-                  if (q.results) {
-                      showResult(q.results[index]);
-                  } else {
-                      currentQuestion = q.next[index];
-                      renderQuestion();
-                  }
-              };
-              optionsDiv.appendChild(button);
-          });
-      }
+        // Container principal para a pergunta e as opções
+        const mainWrapper = document.createElement("div");
+        mainWrapper.className = "d-flex flex-column align-items-center";
 
-      function showResult(result) {
-          questionDiv.textContent = "";
-          optionsDiv.innerHTML = "";
-          resultDiv.textContent = `Certificação recomendada: ${result}`;
-      }
+       
+        // Adicionar opções
+        q.options.forEach((option, index) => {
+            const button = document.createElement("button");
+            button.textContent = option;
+            button.className = "btn btn-primary btn-option mb-2";
+            button.onclick = () => {
+                questionHistory.push(currentQuestion); // Salva a pergunta atual no histórico
+                if (q.results) {
+                    showResult(q.results[index]);
+                } else {
+                    currentQuestion = q.next[index];
+                    renderQuestion();
+                }
+            };
+            mainWrapper.appendChild(button);
+        });
 
-      renderQuestion();
-  </script>
+         // Botão de voltar, de modo a ser possível voltar para perguntas anteriores, em caso de resposta por engano
+         if (questionHistory.length > 0) {
+            const backButton = document.createElement("button");
+            backButton.className = "btn btn-light me-3 mb-2";
+            backButton.innerHTML = '<p><i class="bi bi-arrow-left"></i> Voltar</p>';
+            backButton.onclick = () => {
+                currentQuestion = questionHistory.pop(); // dá pop nessa resposta
+                renderQuestion();
+            };
+            mainWrapper.appendChild(backButton);
+        }
+        optionsDiv.appendChild(mainWrapper);
+    }
+
+    function showResult(result) {
+        questionDiv.textContent = "";
+        optionsDiv.innerHTML = "";
+        resultDiv.innerHTML = `<p class="text-success fw-bold fs-4">Certificação recomendada: ${result}</p>`;
+
+        // botão de tentar novamente
+        const retryButton = document.createElement("button");
+        retryButton.textContent = "Tentar novamente";
+        retryButton.className = "btn btn-warning btn-option mt-3"; 
+        retryButton.onclick = () => {
+            questionHistory = []; // Limpa o  histórico
+            currentQuestion = 0; // Voltar à primeira pergunta
+            renderQuestion();
+        };
+        resultDiv.appendChild(retryButton);
+    }
+
+    renderQuestion();
+</script>
+
+
+
+
+
+
+
 
   <script src="js/bootstrap.bundle.min.js"></script>  
 

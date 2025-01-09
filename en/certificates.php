@@ -567,96 +567,127 @@ require('../includes/connection.php');
     </footer>
 
   <script>
-      // Perguntas e respostas
-    const questions = [
-        {
-            question: "Which area interests you the most?",
-            options: ["Information Security", "IT Governance", "Risk Management"],
-            next: [1, 2, 3]
-        },
-        {
-            question: "Do you have experience in Information Security?",
-            options: ["Yes", "No"],
-            next: [4, 5]
-        },
-        {
-            question: "Do you have experience in IT Governance?",
-            options: ["Yes", "No"],
-            next: [6, 7]
-        },
-        {
-            question: "Do you have experience in Risk Management?",
-            options: ["Yes", "No"],
-            next: [8, 9]
-        },
-        {
-            question: "Which topic interests you the most?",
-            options: ["Auditing", "Management"],
-            results: ["CISA", "CISM"]
-        },
-        {
-            question: "Do you want to explore something practical?",
-            options: ["Yes", "No"],
-            results: ["CSX-P", "CET"]
-        },
-        {
-            question: "Are you interested in leading IT strategies?",
-            options: ["Yes", "No"],
-            results: ["CGEIT", "CRISC"]
-        },
-        {
-            question: "Do you have basic knowledge of IT concepts?",
-            options: ["Yes", "No"],
-            results: ["ITCA", "CET"]
-        },
-        {
-            question: "Do you prefer auditing risks?",
-            options: ["Yes", "No"],
-            results: ["CRISC", "CDPSE"]
-        },
-        {
-            question: "Are you interested in learning about data privacy?",
-            options: ["Yes", "No"],
-            results: ["CDPSE", "CET"]
+        // Perguntas e respostas
+        const questions = [
+            {
+                question: "Which area interests you the most?",
+                options: ["Information Security", "IT Governance", "Risk Management"],
+                next: [1, 2, 3]
+            },
+            {
+                question: "Do you have experience in Information Security?",
+                options: ["Yes", "No"],
+                next: [4, 5]
+            },
+            {
+                question: "Do you have experience in IT Governance?",
+                options: ["Yes", "No"],
+                next: [6, 7]
+            },
+            {
+                question: "Do you have experience in Risk Management?",
+                options: ["Yes", "No"],
+                next: [8, 9]
+            },
+            {
+                question: "Which topic interests you the most?",
+                options: ["Auditing", "Management"],
+                results: ["CISA", "CISM"]
+            },
+            {
+                question: "Do you want to explore something practical?",
+                options: ["Yes", "No"],
+                results: ["CSX-P", "CET"]
+            },
+            {
+                question: "Are you interested in leading IT strategies?",
+                options: ["Yes", "No"],
+                results: ["CGEIT", "CRISC"]
+            },
+            {
+                question: "Do you have basic knowledge of IT concepts?",
+                options: ["Yes", "No"],
+                results: ["ITCA", "CET"]
+            },
+            {
+                question: "Do you prefer auditing risks?",
+                options: ["Yes", "No"],
+                results: ["CRISC", "CDPSE"]
+            },
+            {
+                question: "Are you interested in learning about data privacy?",
+                options: ["Yes", "No"],
+                results: ["CDPSE", "CET"]
+            }
+        ];
+
+        const resultDiv = document.getElementById("result");
+        const questionDiv = document.getElementById("question");
+        const optionsDiv = document.getElementById("options");
+
+        let currentQuestion = 0;
+        let questionHistory = []; // Armazena o histórico das perguntas anteriores
+
+        function renderQuestion() {
+        const q = questions[currentQuestion];
+        questionDiv.textContent = q.question;
+        optionsDiv.innerHTML = "";
+        resultDiv.textContent = "";
+
+        // Container principal para a pergunta e as opções
+        const mainWrapper = document.createElement("div");
+        mainWrapper.className = "d-flex flex-column align-items-center";
+
+       
+        // Adicionar opções
+        q.options.forEach((option, index) => {
+            const button = document.createElement("button");
+            button.textContent = option;
+            button.className = "btn btn-primary btn-option mb-2";
+            button.onclick = () => {
+                questionHistory.push(currentQuestion); // Salva a pergunta atual no histórico
+                if (q.results) {
+                    showResult(q.results[index]);
+                } else {
+                    currentQuestion = q.next[index];
+                    renderQuestion();
+                }
+            };
+            mainWrapper.appendChild(button);
+        });
+
+         // Botão de voltar, de modo a ser possível voltar para perguntas anteriores, em caso de resposta por engano
+         if (questionHistory.length > 0) {
+            const backButton = document.createElement("button");
+            backButton.className = "btn btn-light me-3 mb-2";
+            backButton.innerHTML = '<p><i class="bi bi-arrow-left"></i> Back</p>';
+            backButton.onclick = () => {
+                currentQuestion = questionHistory.pop(); // dá pop nessa resposta
+                renderQuestion();
+            };
+            mainWrapper.appendChild(backButton);
         }
-    ];
+        optionsDiv.appendChild(mainWrapper);
+    }
 
+    function showResult(result) {
+        questionDiv.textContent = "";
+        optionsDiv.innerHTML = "";
+        resultDiv.innerHTML = `<p class="text-success fw-bold fs-4">Recommended Certification: ${result}</p>`;
 
-      const resultDiv = document.getElementById("result");
-      const questionDiv = document.getElementById("question");
-      const optionsDiv = document.getElementById("options");
+        // botão de tentar novamente
+        const retryButton = document.createElement("button");
+        retryButton.textContent = "Try again";
+        retryButton.className = "btn btn-warning btn-option mt-3"; 
+        retryButton.onclick = () => {
+            questionHistory = []; // Limpa o  histórico
+            currentQuestion = 0; // Voltar à primeira pergunta
+            renderQuestion();
+        };
+        resultDiv.appendChild(retryButton);
+    }
 
-      let currentQuestion = 0;
-
-      function renderQuestion() {
-          const q = questions[currentQuestion];
-          questionDiv.textContent = q.question;
-          optionsDiv.innerHTML = "";
-          resultDiv.textContent = "";
-
-          q.options.forEach((option, index) => {
-              const button = document.createElement("button");
-              button.textContent = option;
-              button.className = "btn btn-primary btn-option";
-              button.onclick = () => {
-                  if (q.results) {
-                      showResult(q.results[index]);
-                  } else {
-                      currentQuestion = q.next[index];
-                      renderQuestion();
-                  }
-              };
-              optionsDiv.appendChild(button);
-          });
-      }
-
-      function showResult(result) {
-          questionDiv.textContent = "";
-          optionsDiv.innerHTML = "";
-          resultDiv.textContent = `Recommended Certification: ${result}`;
-      }
-
-      renderQuestion();
+    renderQuestion();
   </script>
 
   <script src="../js/bootstrap.bundle.min.js"></script>  
