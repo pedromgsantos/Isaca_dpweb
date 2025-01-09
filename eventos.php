@@ -58,18 +58,33 @@
             if ($stmt && $stmt->rowCount() > 0) {
                 while ($evento = $stmt->fetchObject()) {
                     $imagem = filter_var($evento->imagem, FILTER_VALIDATE_URL) !== false ? $evento->imagem : 'imagens/eventos/' . $evento->imagem;
-                    ?>
-                    <div class="col d-flex">
-                        <div class="card shadow-sm">
-                            <img class="card-img-top border-end border-5" src="<?= $imagem ?>" alt="<?= $evento->nome ?>">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold"><?= $evento->nome ?></h5>
-                                <p class="card-text text-muted">Data: <?= $evento->data ?></p>
-                                <p class="card-text"> <strong>Descrição: </strong><?= $evento->descricao ?></p>
-                                <a href="detalhesevento.php?id=<?= $evento->id ?>" class="cta-button" style="text-align: center; padding: 8px 15px">Detalhes</a>
-                            </div>
+        ?>
+            <div class="col d-flex">
+                <div class="card shadow-sm mx-auto">
+                    <!-- Dispositivos pequenos (sm) -->
+                    <div class="d-sm-block d-lg-none text-center">
+                        <img class="card-img-top img-fluid mb-3 mx-auto" src="<?= $imagem ?>" alt="<?= $evento->nome ?>" style="max-height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold"><?= $evento->nome ?></h5>
+                            <p class="card-text text-muted">Data: <?= $evento->data ?></p>
+                            <p class="card-text"><strong>Descrição: </strong><?= $evento->descricao ?></p>
+                            <a href="detalhesevento.php?id=<?= $evento->id ?>" class="cta-button btn btn-primary">Detalhes</a>
                         </div>
                     </div>
+                    
+                    <!-- Layout padrão para md e lg -->
+                    <div class="d-none d-lg-flex">
+                        <img class="card-img-top border-end border-5" src="<?= $imagem ?>" alt="<?= $evento->nome ?>">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold"><?= $evento->nome ?></h5>
+                            <p class="card-text text-muted">Data: <?= $evento->data ?></p>
+                            <p class="card-text"><strong>Descrição: </strong><?= $evento->descricao ?></p>
+                            <a href="detalhesevento.php?id=<?= $evento->id ?>" class="cta-button btn btn-primary">Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <?php
                 }
             }
